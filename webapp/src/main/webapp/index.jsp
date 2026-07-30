@@ -182,3 +182,21 @@ footer{
 
 </body>
 </html>
+<div class="hero">
+    <img src="images/f1-car.jpg" alt="Formula 1 Car">
+</div>
+
+<div class="card">
+    <img src="images/ferrari.jpg" alt="Ferrari F1">
+    <h2>Ferrari</h2>
+</div>
+
+<div class="card">
+    <img src="images/redbull.jpg" alt="Red Bull Racing">
+    <h2>Red Bull Racing</h2>
+</div>
+
+<div class="card">
+    <img src="images/mercedes.jpg" alt="Mercedes F1">
+    <h2>Mercedes</h2>
+</div>
