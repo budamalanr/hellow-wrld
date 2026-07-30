@@ -3,171 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formula 1</title>
+<title>Energy & Racing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#111;
-    color:white;
+background:#05070d;
+color:#fff;
+overflow-x:hidden;
 }
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#0047ff;
+filter:blur(180px);
+left:-150px;
+top:-150px;
+opacity:.35;
+z-index:-2;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:#ffd400;
+filter:blur(170px);
+right:-120px;
+bottom:-120px;
+opacity:.25;
+z-index:-2;
+}
+
+/* NAV */
 
 nav{
-    background:#d60000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:999;
 }
 
-nav h2{
-    color:white;
+.logo{
+font-size:28px;
+font-weight:900;
+letter-spacing:2px;
+color:#ffd400;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
+display:flex;
+gap:35px;
+list-style:none;
 }
 
-nav ul li{
-    margin-left:25px;
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
 }
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+nav a:hover{
+color:#ffd400;
 }
+
+/* HERO */
 
 .hero{
-    text-align:center;
-    padding:60px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+min-height:90vh;
+flex-wrap:wrap;
 }
 
-.hero img{
-    width:90%;
-    max-width:900px;
-    border-radius:15px;
+.left{
+flex:1;
+min-width:320px;
 }
 
-.hero h1{
-    margin-top:20px;
-    font-size:45px;
+.left h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
-.hero p{
-    margin-top:15px;
-    font-size:18px;
+.left span{
+color:#ffd400;
 }
 
-button{
-    margin-top:25px;
-    padding:12px 25px;
-    background:#e10600;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+.left p{
+font-size:18px;
+color:#cfd6e6;
+max-width:550px;
+line-height:1.8;
+margin-bottom:35px;
 }
+
+.btn{
+display:inline-block;
+padding:16px 38px;
+background:linear-gradient(90deg,#0047ff,#0b63ff);
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 25px #0047ff;
+transition:.35s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 45px #ffd400;
+}
+
+.right{
+flex:1;
+text-align:center;
+min-width:320px;
+}
+
+.right img{
+width:420px;
+max-width:100%;
+border-radius:25px;
+box-shadow:0 30px 60px rgba(0,0,0,.5);
+}
+
+/* SECTION */
 
 section{
-    padding:50px;
+padding:80px 8%;
+}
+
+.title{
+font-size:42px;
+margin-bottom:45px;
+text-align:center;
 }
 
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#222;
-    width:300px;
-    border-radius:10px;
-    overflow:hidden;
-    text-align:center;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+overflow:hidden;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:230px;
+object-fit:cover;
 }
 
-.card h2{
-    margin:15px 0;
+.card h3{
+padding:20px;
+font-size:24px;
 }
 
 .card p{
-    padding:0 15px 20px;
+padding:0 20px 25px;
+color:#d7d7d7;
+line-height:1.8;
 }
 
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.box{
+padding:35px;
+background:linear-gradient(145deg,#0c1322,#121d35);
+border-radius:18px;
+text-align:center;
+}
+
+.box h2{
+font-size:40px;
+margin-bottom:10px;
+color:#ffd400;
+}
+
+.box p{
+color:#cfcfcf;
+}
+
+/* FOOTER */
+
 footer{
-    background:#000;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+padding:30px;
+text-align:center;
+background:#02040a;
+color:#bbb;
+}
+
+@media(max-width:900px){
+
+.hero{
+text-align:center;
+}
+
+.left h1{
+font-size:48px;
+}
+
 }
 
 </style>
-
 </head>
+
 <body>
 
 <nav>
-<h2>🏁 Formula 1</h2>
+
+<div class="logo">ENERGY RACING</div>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Drivers</a></li>
-<li><a href="#">Teams</a></li>
-<li><a href="#">Schedule</a></li>
+<li><a href="#">Performance</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
 
 </nav>
 
 <div class="hero">
 
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200" alt="Race Car">
+<div class="left">
 
-<h1>Welcome to Formula 1</h1>
+<h1>Fuel Your <span>Energy</span><br>Feel The Speed</h1>
 
-<p>The pinnacle of motorsport featuring the world's fastest racing cars.</p>
+<p>
+Inspired by high-performance motorsport and energy drinks, this premium landing page combines bold colours, luxury styling, and racing-inspired design.
+</p>
 
-<button>Explore</button>
+<a href="#" class="btn">Explore</a>
+
+</div>
+
+<div class="right">
+
+<!-- Replace with your own licensed image -->
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=900" alt="Sports Car">
+
+</div>
 
 </div>
 
 <section>
 
-<h1 style="text-align:center;margin-bottom:40px;">Top Drivers</h1>
+<h2 class="title">Performance Inspired</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600" alt="">
-<h2>Driver 1</h2>
-<p>Replace this image and text with your favourite F1 driver's details.</p>
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900" alt="">
+<h3>Speed</h3>
+<p>Inspired by the excitement, precision, and technology of elite motorsport.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600" alt="">
-<h2>Driver 2</h2>
-<p>Add information about another Formula 1 driver here.</p>
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900" alt="">
+<h3>Power</h3>
+<p>A premium visual style combining bold colours, glowing highlights, and modern layouts.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600" alt="">
-<h2>Driver 3</h2>
-<p>Showcase another driver or constructor team.</p>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900" alt="">
+<h3>Adventure</h3>
+<p>Built with responsive HTML and CSS for a sleek experience on desktop and mobile.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Why This Design?</h2>
+
+<div class="features">
+
+<div class="box">
+<h2>⚡</h2>
+<p>Modern UI</p>
+</div>
+
+<div class="box">
+<h2>🏁</h2>
+<p>Racing Theme</p>
+</div>
+
+<div class="box">
+<h2>🥤</h2>
+<p>Energy Inspired</p>
+</div>
+
+<div class="box">
+<h2>💎</h2>
+<p>Premium Look</p>
 </div>
 
 </div>
@@ -175,28 +345,8 @@ footer{
 </section>
 
 <footer>
-
-<p>© 2026 Formula 1 Fan Website</p>
-
+© 2026 Energy Racing Demo. This is a fan-inspired design and does not include official Red Bull or Formula 1 branding or copyrighted imagery.
 </footer>
 
 </body>
 </html>
-<div class="hero">
-    <img src="images/f1-car.jpg" alt="Formula 1 Car">
-</div>
-
-<div class="card">
-    <img src="images/ferrari.jpg" alt="Ferrari F1">
-    <h2>Ferrari</h2>
-</div>
-
-<div class="card">
-    <img src="images/redbull.jpg" alt="Red Bull Racing">
-    <h2>Red Bull Racing</h2>
-</div>
-
-<div class="card">
-    <img src="images/mercedes.jpg" alt="Mercedes F1">
-    <h2>Mercedes</h2>
-</div>
