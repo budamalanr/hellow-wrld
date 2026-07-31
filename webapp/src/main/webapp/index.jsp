@@ -161,13 +161,13 @@ Explore legendary heroes, epic adventures, and unforgettable stories in this Mar
 
 <div class="card">
 <img src="https://via.placeholder.com/400x250?text=Hero+1">
-<h2>Hero One</h2>
+<h2>Hero 1</h2>
 <p>Add your own licensed or original hero artwork here.</p>
 </div>
 
 <div class="card">
 <img src="https://via.placeholder.com/400x250?text=Hero+2">
-<h2>Hero Two</h2>
+<h2>Hero 2</h2>
 <p>Showcase favourite characters, comics, or movies.</p>
 </div>
 
